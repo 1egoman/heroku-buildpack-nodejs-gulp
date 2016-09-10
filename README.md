@@ -7,7 +7,7 @@ Usage
 - Set your Heroku app's buildpack URL to `https://github.com/appstack/heroku-buildpack-nodejs-gulp.git`. To be safe, you should really fork this and use your fork's URL.
 - Run `heroku labs:enable user-env-compile` to enable environment variable support
 - Run `heroku config:set NODE_ENV=production` to set your environment to `production` (or any other name)
-- Add a Gulp task called `heroku:production` that builds your app
+- Add a Gulp task called `build` that builds your app (with a flag or `NODE_ENV`, like `gulp build --production` for example)
 - Install the dependenies for serving the app: `npm install gzippo express --save`
 - Create a simple web server in the root called `web.js`:
 
